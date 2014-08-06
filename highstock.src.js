@@ -11369,14 +11369,14 @@ Chart.prototype = {
 		
 		// Adjust for legend
 		if (legend.display && !legendOptions.floating) {
-			if (align === 'right' && horizontal) { // horizontal alignment handled first
+			if (align === 'right' && !horizontal) { // horizontal alignment handled first
 				if (!defined(margin[1])) {
 					chart.marginRight = mathMax(
 						chart.marginRight,
 						legend.legendWidth - legendX + legendMargin + spacing[1]
 					);
 				}
-			} else if (align === 'left' && horizontal) {
+			} else if (align === 'left' && !horizontal) {
 				if (!defined(margin[3])) {
 					chart.plotLeft = mathMax(
 						chart.plotLeft,
@@ -11384,7 +11384,7 @@ Chart.prototype = {
 					);
 				}
 
-			} else if (verticalAlign === 'top' && !horizontal) {
+			} else if (verticalAlign === 'top' && horizontal) {
 				if (!defined(margin[0])) {
 					chart.plotTop = mathMax(
 						chart.plotTop,
@@ -11392,7 +11392,7 @@ Chart.prototype = {
 					);
 				}
 
-			} else if (verticalAlign === 'bottom' && !horizontal) {
+			} else if (verticalAlign === 'bottom' && horizontal) {
 				if (!defined(margin[2])) {
 					chart.marginBottom = mathMax(
 						chart.marginBottom,
