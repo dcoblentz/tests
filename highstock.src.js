@@ -11384,7 +11384,7 @@ Chart.prototype = {
 					);
 				}
 
-			} else if (verticalAlign === 'top' && horizontal) {
+			} else if (verticalAlign === 'top' && (horizontal || align === 'center')) {
 				if (!defined(margin[0])) {
 					chart.plotTop = mathMax(
 						chart.plotTop,
@@ -11392,7 +11392,7 @@ Chart.prototype = {
 					);
 				}
 
-			} else if (verticalAlign === 'bottom' && horizontal) {
+			} else if (verticalAlign === 'bottom' && (horizontal || align === 'center')) {
 				if (!defined(margin[2])) {
 					chart.marginBottom = mathMax(
 						chart.marginBottom,
