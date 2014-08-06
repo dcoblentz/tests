@@ -11357,7 +11357,7 @@ Chart.prototype = {
 			align = legendOptions.align,
 			verticalAlign = legendOptions.verticalAlign,
 			titleOffset = chart.titleOffset,
-            horizontal = legendOptions.layout === 'horizontal',;
+            horizontal = legendOptions.layout === 'horizontal';
 
 		chart.resetMargins();
 		axisOffset = chart.axisOffset;
